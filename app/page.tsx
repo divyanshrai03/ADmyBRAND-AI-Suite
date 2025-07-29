@@ -1,9 +1,10 @@
 'use client'
 import React, { useState, useEffect, useRef } from 'react'
-import { motion, AnimatePresence, useAnimation } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 import { Suspense } from 'react';
+import Image from 'next/image';
 // --- DUMMY DATA --- //
 const features = [
   {
@@ -628,7 +629,7 @@ const GlobalPulseSection = () => {
                             <h3 className="text-xl font-bold text-white font-space-grotesk mb-4">Live Feed</h3>
                             <div className="flex-grow overflow-hidden relative">
                                 <AnimatePresence>
-                                    {feed.map((item, i) => (
+                                    {feed.map((item) => (
                                         <motion.div
                                             key={item.id}
                                             layout
@@ -822,7 +823,7 @@ const TestimonialsSection = () => {
                                 <GlassmorphicCard className="h-full flex flex-col justify-between">
                                     <p className="text-slate-200 text-lg italic">"{testimonial.quote}"</p>
                                     <div className="mt-6 flex items-center">
-                                        <img src={testimonial.imgSrc} alt={testimonial.name} className="w-12 h-12 rounded-full border-2 border-purple-400" />
+                                        <Image src={testimonial.imgSrc} alt={testimonial.name} className="w-12 h-12 rounded-full border-2 border-purple-400" />
                                         <div className="ml-4">
                                             <p className="font-bold text-white font-space-grotesk">{testimonial.name}</p>
                                             <p className="text-slate-400">{testimonial.title}</p>
