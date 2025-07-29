@@ -556,7 +556,7 @@ const GlobalPulseSection = () => {
 
         }, 3000);
         return () => clearInterval(interval);
-    }, []);
+    }, [locations]);
 
     const sentimentConfig = {
         positive: { icon: 'SentimentPositive', color: 'text-green-400', stroke: '#4ade80' },
@@ -823,7 +823,7 @@ const TestimonialsSection = () => {
                                 <GlassmorphicCard className="h-full flex flex-col justify-between">
                                     <p className="text-slate-200 text-lg italic">"{testimonial.quote}"</p>
                                     <div className="mt-6 flex items-center">
-                                        <Image src={testimonial.imgSrc} alt={testimonial.name} className="w-12 h-12 rounded-full border-2 border-purple-400" />
+                                        <img src={testimonial.imgSrc} alt={testimonial.name} className="w-12 h-12 rounded-full border-2 border-purple-400" />
                                         <div className="ml-4">
                                             <p className="font-bold text-white font-space-grotesk">{testimonial.name}</p>
                                             <p className="text-slate-400">{testimonial.title}</p>
