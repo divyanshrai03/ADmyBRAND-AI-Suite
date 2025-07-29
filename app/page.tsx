@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 import { Suspense } from 'react';
-import Image from 'next/image';
+
 // --- DUMMY DATA --- //
 const features = [
   {
